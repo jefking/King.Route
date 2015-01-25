@@ -15,10 +15,7 @@
     <releaseNotes>ALPHA; call classes using routes.</releaseNotes>
     <copyright>Jef King</copyright>
     <language>en-US</language>
-    <tags>Model Route Controller MQC Route Routing Router scalable throughput test testing easy mock mocking King.Route</tags>
-    <dependencies>
-      <dependency id="Newtonsoft.Json" />
-    </dependencies>
+    <tags>Model Route Routing Router scalable throughput test testing easy mock mocking King.Route</tags>
   </metadata>
   <files>
     <file src="King.Route\bin\Release\King.Route.dll" target="lib\net35\King.Route.dll" />
