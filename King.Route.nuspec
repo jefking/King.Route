@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>King.Route</id>
+    <version>0.0.0</version>
+    <title>King.Route</title>
+    <authors>Jef King</authors>
+    <owners>Jef King</owners>
+    <licenseUrl>https://github.com/jefking/King.Route/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jefking/King.Route</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/jefking/King.Route/master/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Route between classes</description>
+    <summary>Route between classes</summary>
+    <releaseNotes>ALPHA; call classes using routes.</releaseNotes>
+    <copyright>Jef King</copyright>
+    <language>en-US</language>
+    <tags>Model Route Controller MQC Route Routing Router scalable throughput test testing easy mock mocking King.Route</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="King.Route\bin\Release\King.Route.dll" target="lib\net35\King.Route.dll" />
+  </files>
+</package>
