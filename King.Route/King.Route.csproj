@@ -39,6 +39,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DirectRoute.cs" />
+    <Compile Include="Interfaces.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteAliasAttribute.cs" />
     <Compile Include="RouteCollection.cs" />

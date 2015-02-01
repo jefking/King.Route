@@ -1,4 +1,4 @@
-﻿namespace King.MQC.Unit.Test
+﻿namespace King.Route.Unit.Test
 {
     using King.MQC.Routing;
     using NUnit.Framework;

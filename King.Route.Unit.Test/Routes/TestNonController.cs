@@ -1,4 +1,4 @@
-﻿namespace King.MQC.Unit.Test.Routes
+﻿namespace King.Route.Unit.Test.Routes
 {
     using King.MQC.Routing;
 

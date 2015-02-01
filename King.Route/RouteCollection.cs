@@ -14,7 +14,7 @@
         /// Add Route
         /// </summary>
         /// <param name="className">Class Name</param>
-        /// <param name="alias"></param>
+        /// <param name="alias">Alias</param>
         /// <param name="type">Type</param>
         /// <param name="methodName">Method Name</param>
         public virtual void Add(string className, string alias, Type type, string methodName = null)
