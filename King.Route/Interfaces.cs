@@ -11,17 +11,17 @@
         /// Send
         /// </summary>
         /// <param name="route">Route</param>
-        /// <param name="model">Model</param>
-        void Send(string route, object model = null);
+        /// <param name="models">Model</param>
+        void Send(string route, params object[] models);
 
         /// <summary>
         /// Get Data
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="route">Route</param>
-        /// <param name="model">Model</param>
+        /// <param name="models">Model</param>
         /// <returns>Data</returns>
-        T Get<T>(string route, object model = null);
+        T Get<T>(string route, params object[] models);
         #endregion
     }
     #endregion

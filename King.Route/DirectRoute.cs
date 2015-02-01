@@ -20,10 +20,10 @@
         /// Send
         /// </summary>
         /// <param name="route">Route</param>
-        /// <param name="model">Model</param>
-        public virtual void Send(string route, object model = null)
+        /// <param name="models">Model</param>
+        public virtual void Send(string route, params object[] models)
         {
-            this.Invoke(route, model);
+            this.Invoke(route, models);
         }
 
         /// <summary>
@@ -31,20 +31,20 @@
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="route">Route</param>
-        /// <param name="model">Model</param>
+        /// <param name="models">Model</param>
         /// <returns>Data</returns>
-        public virtual T Get<T>(string route, object model = null)
+        public virtual T Get<T>(string route, params object[] models)
         {
-            return (T)this.Invoke(route, model);
+            return (T)this.Invoke(route, models);
         }
 
         /// <summary>
         /// Invoke Route
         /// </summary>
         /// <param name="route">Route</param>
-        /// <param name="model">Model</param>
+        /// <param name="models">Model</param>
         /// <returns>Return Value</returns>
-        public virtual object Invoke(string route, object model = null)
+        public virtual object Invoke(string route, params object[] models)
         {
             if (string.IsNullOrEmpty(route))
             {
@@ -54,11 +54,10 @@
             {
                 throw new InvalidOperationException(string.Format("Unknown route; route not mapped in RouteTable: '{0}'.", route));
             }
-
-            var paramaters = null == model ? null : new[] { model };
+            
             var entry = RouteTable.Routes[route];
             var obj = Activator.CreateInstance(entry.Type);
-            return entry.Type.InvokeMember(entry.Method, methodFlags, null, obj, paramaters);
+            return entry.Type.InvokeMember(entry.Method, methodFlags, null, obj, models);
         }
         #endregion
     }
