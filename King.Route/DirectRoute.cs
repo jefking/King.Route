@@ -1,6 +1,5 @@
-﻿namespace King.MQC
+﻿namespace King.Route
 {
-    using King.MQC.Routing;
     using System;
     using System.Reflection;
 
@@ -47,7 +46,7 @@
         /// <returns>Return Value</returns>
         public virtual object Invoke(string route, object model = null)
         {
-            if (string.IsNullOrWhiteSpace(route))
+            if (string.IsNullOrEmpty(route))
             {
                 throw new InvalidOperationException("Route is empty, ensure caller is specifying a route.");
             }

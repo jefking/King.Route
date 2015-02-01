@@ -1,4 +1,4 @@
-﻿namespace King.MQC
+﻿namespace King.Route
 {
     #region IQueue
     /// <summary>

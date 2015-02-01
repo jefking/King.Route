@@ -1,4 +1,4 @@
-﻿namespace King.MQC.Routing
+﻿namespace King.Route
 {
     using System;
 

@@ -6,13 +6,6 @@
     [TestFixture]
     public class DirectRouteTests
     {
-        [SetUp]
-        public void Setup()
-        {
-            var config = new MqcConfiguration();
-            config.MapMqcAttributeRoutes();
-        }
-
         [Test]
         public void Constructor()
         {

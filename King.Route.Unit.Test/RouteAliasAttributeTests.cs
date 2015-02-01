@@ -1,6 +1,6 @@
 ﻿namespace King.Route.Unit.Test
 {
-    using King.MQC.Routing;
+    using King.Route;
     using NUnit.Framework;
     using System;
 

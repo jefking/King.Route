@@ -1,6 +1,6 @@
 ﻿namespace King.Route.Unit.Test.Routes
 {
-    using King.MQC.Routing;
+    using King.Route;
 
     /// <summary>
     /// Attribute based Controller
