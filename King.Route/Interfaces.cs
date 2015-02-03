@@ -1,6 +1,6 @@
 ﻿namespace King.Route
 {
-    #region IQueue
+    #region IRouteTo
     /// <summary>
     /// Route To Interface
     /// </summary>
