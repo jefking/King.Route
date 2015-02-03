@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>King.Route</id>
-    <version>0.0.0</version>
+    <version>0.0.1</version>
     <title>King.Route</title>
     <authors>Jef King</authors>
     <owners>Jef King</owners>
@@ -18,6 +18,6 @@
     <tags>Model Route Routing Router scalable throughput test testing easy mock mocking King.Route</tags>
   </metadata>
   <files>
-    <file src="King.Route\bin\Release\King.Route.dll" target="lib\net35\King.Route.dll" />
+    <file src="King.Route\bin\Release\King.Route.dll" target="lib\net40\King.Route.dll" />
   </files>
 </package>

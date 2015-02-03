@@ -25,4 +25,13 @@
         #endregion
     }
     #endregion
+
+    #region IRoutableController
+    /// <summary>
+    /// Routable Controller Interface
+    /// </summary>
+    public interface IRoutableController
+    {
+    }
+    #endregion
 }

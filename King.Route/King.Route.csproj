@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>King.Route</RootNamespace>
     <AssemblyName>King.Route</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -47,6 +47,7 @@
     <Compile Include="RoutedData.cs" />
     <Compile Include="RouteEntry.cs" />
     <Compile Include="RouteTable.cs" />
+    <Compile Include="RoutingConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
