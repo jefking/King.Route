@@ -18,6 +18,6 @@
     <tags>Model Route Routing Router scalable throughput test testing easy mock mocking King.Route</tags>
   </metadata>
   <files>
-    <file src="King.Route\bin\Release\King.Route.dll" target="lib\net40\King.Route.dll" />
+    <file src="King.Route\bin\Release\King.Route.dll" target="lib\net45\King.Route.dll" />
   </files>
 </package>

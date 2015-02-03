@@ -6,6 +6,13 @@
     [TestFixture]
     public class DirectRouteTests
     {
+        [SetUp]
+        public void Setup()
+        {
+            var config = new RoutingConfiguration();
+            config.MapMqcAttributeRoutes();
+        }
+
         [Test]
         public void Constructor()
         {
@@ -40,10 +47,10 @@
             var random = new Random();
             var expected = random.Next();
 
-            var queue = new DirectRoute();
-            queue.Send("Test/Set", expected);
+            var route = new DirectRoute();
+            route.Send("Test/Set", expected);
 
-            var value = queue.Get<int>("Test/Get");
+            var value = route.Get<int>("Test/Get");
 
             Assert.AreEqual(expected, value);
         }
@@ -54,10 +61,10 @@
             var random = new Random();
             var expected = random.Next();
 
-            var queue = new DirectRoute();
-            queue.Send("TestNon/Set", expected);
+            var route = new DirectRoute();
+            route.Send("TestNon/Set", expected);
 
-            var value = queue.Get<int>("TestNon/Red");
+            var value = route.Get<int>("TestNon/Red");
 
             Assert.AreEqual(expected, value);
         }

@@ -64,7 +64,7 @@
         {
             var routes = new RouteCollection();
 
-            foreach (var type in assembly.GetTypes().Where(cls => cls.BaseType == typeof(IRoutableController)))
+            foreach (var type in assembly.GetTypes().Where(cls => cls.GetInterfaces().Contains(typeof(IRoutableController))))
             {
                 var className = type.Name.EndsWith("Controller") ? type.Name.Replace("Controller", string.Empty) : type.Name;
                 routes.Merge(this.GetMethods(type, className));

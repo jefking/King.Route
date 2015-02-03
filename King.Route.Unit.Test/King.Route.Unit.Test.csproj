@@ -57,6 +57,7 @@
     <Compile Include="RouteAliasAttributeTests.cs" />
     <Compile Include="RouteCollectionTests.cs" />
     <Compile Include="RouteEntryTests.cs" />
+    <Compile Include="Routes\TestController.cs" />
     <Compile Include="Routes\TestNonController.cs" />
     <Compile Include="RouteTableTests.cs" />
   </ItemGroup>
