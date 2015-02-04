@@ -12,10 +12,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Route between classes</description>
     <summary>Route between classes</summary>
-    <releaseNotes>ALPHA; call classes using routes.</releaseNotes>
+    <releaseNotes>ALPHA; methods with multiple parameters are routable.</releaseNotes>
     <copyright>Jef King</copyright>
     <language>en-US</language>
     <tags>Model Route Routing Router scalable throughput test testing easy mock mocking King.Route</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="net45" />
+    </frameworkAssemblies>
   </metadata>
   <files>
     <file src="King.Route\bin\Release\King.Route.dll" target="lib\net45\King.Route.dll" />

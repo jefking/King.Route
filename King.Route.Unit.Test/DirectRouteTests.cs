@@ -68,5 +68,18 @@
 
             Assert.AreEqual(expected, value);
         }
+
+        [Test]
+        public void ManyMultiplier()
+        {
+            var random = new Random();
+            var i = random.Next();
+            var j = random.Next();
+
+            var route = new DirectRoute();
+            var value = route.Get<int>("Many/Multiplier", i, j);
+
+            Assert.AreEqual(i * j, value);
+        }
     }
 }
