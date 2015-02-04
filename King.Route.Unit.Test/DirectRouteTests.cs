@@ -10,7 +10,7 @@
         public void Setup()
         {
             var config = new RoutingConfiguration();
-            config.MapMqcAttributeRoutes();
+            config.MapAttributeRoutes();
         }
 
         [Test]

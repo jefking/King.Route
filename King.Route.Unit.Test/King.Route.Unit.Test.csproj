@@ -58,9 +58,11 @@
     <Compile Include="RouteCollectionTests.cs" />
     <Compile Include="RouteEntryTests.cs" />
     <Compile Include="Routes\ManyController.cs" />
+    <Compile Include="Routes\TestBlahBlah.cs" />
     <Compile Include="Routes\TestController.cs" />
     <Compile Include="Routes\TestNonController.cs" />
     <Compile Include="RouteTableTests.cs" />
+    <Compile Include="RoutingConfigurationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

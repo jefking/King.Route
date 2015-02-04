@@ -47,7 +47,7 @@
         /// <summary>
         /// Map MQC Attribute Routes
         /// </summary>
-        public virtual void MapMqcAttributeRoutes()
+        public virtual void MapAttributeRoutes()
         {
             var assembly = Assembly.GetCallingAssembly();
 
