@@ -1,4 +1,4 @@
 ALPHA
 ========
 
-Routing: route models to methods; and be easily overloaded
+Routing: route models to controllers; code so simple
