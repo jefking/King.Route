@@ -1,7 +1,7 @@
 ALPHA
 ========
 
-## Routing: route models to controllers; code so simple
+## Routing: route models to controllers; "code so simple"
 
 + Routing setup (Controller Classes)
 + Call methods via routing
@@ -28,7 +28,7 @@ To: http -> web api -> route -> dal -> route -> storage
 
 ### Ideas
 Controllers
-+ Stateful? Should be able to load just one and keep using it? Cache
++ Stateful? Should be able to load just one and keep using it? Cache Type.
 + Call type per route
 
 Calling
