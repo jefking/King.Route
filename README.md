@@ -1,7 +1,7 @@
 ALPHA
 ========
 
-## Routing: route models to controllers; "code so simple"
+## Routing: route models to controllers; "code so simple"; Loose Coupled Code
 
 + Routing setup (Controller Classes)
 + Call methods via routing
