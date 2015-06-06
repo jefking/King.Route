@@ -5,6 +5,7 @@
     using King.Azure.Data;
     using King.Route.Demo.MVC.Models;
 
+    [RouteAlias("CompanyStorage")]
     public class CompanyStorage
     {
         private readonly ITableStorage storage = new TableStorage("", "");
