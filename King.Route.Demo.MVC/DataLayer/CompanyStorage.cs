@@ -2,22 +2,47 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
     using King.Azure.Data;
     using King.Route.Demo.MVC.Models;
+    using Microsoft.Azure;
+    using Microsoft.WindowsAzure.Storage.Table;
 
     [RouteAlias("CompanyStorage")]
     public class CompanyStorage
     {
-        private readonly ITableStorage storage = new TableStorage("company_route", "");
+        private static readonly string connection = CloudConfigurationManager.GetSetting("StorageAccount");
+        private readonly ITableStorage storage = new TableStorage("company_route", connection);
 
-        public void Save(Company company)
+        public async Task Save(Company company)
         {
-            //storage.InsertOrReplace()
+            var c = new TableEntity()
+            {
+                RowKey = company.Identifer.ToString(),
+                PartitionKey = company.Name,
+            };
+
+            await storage.InsertOrReplace(c);
         }
 
-        public IEnumerable<Company> Search(Guid id, string name)
+        public async Task<IEnumerable<Company>> Search(Guid id, string name)
         {
-            return null;
+            if (Guid.Empty != id && !string.IsNullOrWhiteSpace(name))
+            {
+                return await this.storage.QueryByPartitionAndRow<Company>(name, id.ToString());
+            }
+            else if (Guid.Empty != id)
+            {
+                return await this.storage.QueryByRow<Company>(id.ToString());
+            }
+            else if (!string.IsNullOrWhiteSpace(name))
+            {
+                return await this.storage.QueryByPartition<Company>(name);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
