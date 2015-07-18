@@ -10,12 +10,12 @@
 
         public IEnumerable<Company> Get([FromUri] Company model)
         {
-            return this.route.Get<IEnumerable<Company>>("CompanyStorage/Save", model);
+            return this.route.Get<IEnumerable<Company>>("CompanyStorage/Search", model);
         }
         
         public void Post([FromBody] Company model)
         {
-            this.route.Send("CompanyStorage/Search", model);
+            this.route.Send("CompanyStorage/Save", model);
         }
     }
 }
