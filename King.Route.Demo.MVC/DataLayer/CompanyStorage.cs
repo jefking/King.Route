@@ -25,20 +25,26 @@
             await storage.InsertOrReplace(c);
         }
 
-        public async Task<IEnumerable<Company>> Search(Guid id, string name)
+        public async Task<Company> Search(Guid id, string name)
         {
             if (Guid.Empty != id && !string.IsNullOrWhiteSpace(name))
             {
-                return await this.storage.QueryByPartitionAndRow<Company>(name, id.ToString());
+                var cs = await this.storage.QueryByPartitionAndRow(name, id.ToString());
+
+                return new Company()
+                {
+                    Identifer = Guid.Parse(cs[TableStorage.RowKey] as string),
+                    Name = cs[TableStorage.PartitionKey] as string
+                };
             }
-            else if (Guid.Empty != id)
-            {
-                return await this.storage.QueryByRow<Company>(id.ToString());
-            }
-            else if (!string.IsNullOrWhiteSpace(name))
-            {
-                return await this.storage.QueryByPartition<Company>(name);
-            }
+            //else if (Guid.Empty != id)
+            //{
+            //    return await this.storage.QueryByRow<Company>(id.ToString());
+            //}
+            //else if (!string.IsNullOrWhiteSpace(name))
+            //{
+            //    return await this.storage.QueryByPartition<Company>(name);
+            //}
             else
             {
                 return null;
