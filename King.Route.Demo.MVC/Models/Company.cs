@@ -4,7 +4,7 @@
 
     public class Company
     {
-        public Guid Identifer
+        public Guid Identifier
         {
             get;
             set;

@@ -18,7 +18,7 @@
         {
             var c = new TableEntity()
             {
-                RowKey = company.Identifer.ToString(),
+                RowKey = company.Identifier.ToString(),
                 PartitionKey = company.Name,
             };
 
@@ -33,7 +33,7 @@
 
                 return new Company()
                 {
-                    Identifer = Guid.Parse(cs[TableStorage.RowKey] as string),
+                    Identifier = Guid.Parse(cs[TableStorage.RowKey] as string),
                     Name = cs[TableStorage.PartitionKey] as string
                 };
             }
