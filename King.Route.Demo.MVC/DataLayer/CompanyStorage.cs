@@ -25,11 +25,11 @@
             await storage.InsertOrReplace(c);
         }
 
-        public async Task<Company> Search(Guid id, string name)
+        public Company Search(Guid id, string name)
         {
             if (Guid.Empty != id && !string.IsNullOrWhiteSpace(name))
             {
-                var cs = await this.storage.QueryByPartitionAndRow(name, id.ToString());
+                var cs = this.storage.QueryByPartitionAndRow(name, id.ToString()).Result;
 
                 return new Company()
                 {
