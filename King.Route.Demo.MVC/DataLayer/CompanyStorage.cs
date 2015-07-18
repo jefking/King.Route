@@ -12,7 +12,7 @@
     public class CompanyStorage
     {
         private static readonly string connection = CloudConfigurationManager.GetSetting("StorageAccount");
-        private readonly ITableStorage storage = new TableStorage("company_route", connection);
+        private readonly ITableStorage storage = new TableStorage("companyroute", connection);
 
         public async Task Save(Company company)
         {
