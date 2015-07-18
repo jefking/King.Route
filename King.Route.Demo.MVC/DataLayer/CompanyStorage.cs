@@ -8,7 +8,7 @@
     [RouteAlias("CompanyStorage")]
     public class CompanyStorage
     {
-        private readonly ITableStorage storage = new TableStorage("", "");
+        private readonly ITableStorage storage = new TableStorage("company_route", "");
 
         public void Save(Company company)
         {
