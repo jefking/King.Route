@@ -9,8 +9,7 @@ namespace King.Route.Demo.MVC
         public void Configuration(IAppBuilder app)
         {
             var config = new RoutingConfiguration();
-            config.MapMqcAttributeRoutes();
-            var x = config.Routes;
+            config.MapAttributeRoutes();
         }
     }
 }

@@ -29,7 +29,10 @@
         {
             if (Guid.Empty != id && !string.IsNullOrWhiteSpace(name))
             {
-                var cs = this.storage.QueryByPartitionAndRow(name, id.ToString()).Result;
+                var task = this.storage.QueryByPartitionAndRow(name, id.ToString());
+
+                task.Wait();
+                var cs = task.Result;
 
                 return new Company()
                 {
