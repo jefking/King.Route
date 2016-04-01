@@ -38,3 +38,6 @@ Calling
 
 Route Types
 + Direct Route, no-queue (done)
++ 
+
+Routing is built into DNXCore: App.UseRouter(IRouter)
